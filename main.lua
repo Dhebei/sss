@@ -1,8 +1,8 @@
 getgenv().Configs = {
 	Team = "Pirates", --Marines/Pirates
-	Saber = false, --true/false
-	Pole = false, --true/false
-	SkipFarmLevel = false --true/false
+	Saber = true, --true/false
+	Pole = true, --true/false
+	SkipFarmLevel = true --true/false
 }
 if not game:IsLoaded() then
     game.Loaded:Wait()
@@ -371,61 +371,6 @@ local function GetWorld()
         return 0
     end
 end
-
-local BloxFruitsQuestRouteByLevel = {
-    -- First Sea (World 1) quest map adapted from the public Blox Fruits quest page.
-    {World = 1, LevelMin = 1, LevelMax = 9, Monster = "Bandit", NameQuest = "BanditQuest1", LevelQuest = 1, NameCheckQuest = "Bandit", CFrameQ = CFrame.new(1060, 17, 1547), CFrameMon = CFrame.new(1145, 17, 1634)},
-    {World = 1, LevelMin = 10, LevelMax = 14, Monster = "Monkey", NameQuest = "JungleQuest", LevelQuest = 1, NameCheckQuest = "Monkey", CFrameQ = CFrame.new(-1602, 37, 152), CFrameMon = CFrame.new(-1496, 39, 35)},
-    {World = 1, LevelMin = 15, LevelMax = 29, Monster = "Gorilla", NameQuest = "JungleQuest", LevelQuest = 2, NameCheckQuest = "Gorilla", CFrameQ = CFrame.new(-1602, 37, 152), CFrameMon = CFrame.new(-1237, 6, -486)},
-    {World = 1, LevelMin = 30, LevelMax = 39, Monster = "Pirate", NameQuest = "BuggyQuest1", LevelQuest = 1, NameCheckQuest = "Pirate", CFrameQ = CFrame.new(-1140, 5, 3828), CFrameMon = CFrame.new(-1115, 14, 3938)},
-    {World = 1, LevelMin = 40, LevelMax = 59, Monster = "Brute", NameQuest = "BuggyQuest1", LevelQuest = 2, NameCheckQuest = "Brute", CFrameQ = CFrame.new(-1140, 5, 3828), CFrameMon = CFrame.new(-1145, 15, 4350)},
-    {World = 1, LevelMin = 60, LevelMax = 74, Monster = "Desert Bandit", NameQuest = "DesertQuest", LevelQuest = 1, NameCheckQuest = "Desert Bandit", CFrameQ = CFrame.new(897, 7, 4388), CFrameMon = CFrame.new(932, 7, 4484)},
-    {World = 1, LevelMin = 75, LevelMax = 89, Monster = "Desert Officer", NameQuest = "DesertQuest", LevelQuest = 2, NameCheckQuest = "Desert Officers", CFrameQ = CFrame.new(897, 7, 4388), CFrameMon = CFrame.new(1572, 10, 4373)},
-    {World = 1, LevelMin = 90, LevelMax = 99, Monster = "Snow Bandit", NameQuest = "SnowQuest", LevelQuest = 1, NameCheckQuest = "Snow Bandits", CFrameQ = CFrame.new(1386, 87, -1297), CFrameMon = CFrame.new(1289, 150, -1442)},
-    {World = 1, LevelMin = 100, LevelMax = 119, Monster = "Snowman", NameQuest = "SnowQuest", LevelQuest = 2, NameCheckQuest = "Snowman", CFrameQ = CFrame.new(1386, 87, -1297), CFrameMon = CFrame.new(1289, 150, -1442)},
-    {World = 1, LevelMin = 120, LevelMax = 149, Monster = "Chief Petty Officer", NameQuest = "MarineQuest2", LevelQuest = 1, NameCheckQuest = "Chief Petty Officer", CFrameQ = CFrame.new(-5036, 29, 4325), CFrameMon = CFrame.new(-4855, 23, 4308)},
-    {World = 1, LevelMin = 150, LevelMax = 174, Monster = "Sky Bandit", NameQuest = "SkyQuest", LevelQuest = 1, NameCheckQuest = "Sky Bandit", CFrameQ = CFrame.new(-4842, 718, -2623), CFrameMon = CFrame.new(-4981, 278, -2830)},
-    {World = 1, LevelMin = 175, LevelMax = 189, Monster = "Dark Master", NameQuest = "SkyQuest", LevelQuest = 2, NameCheckQuest = "Dark Master", CFrameQ = CFrame.new(-4842, 718, -2623), CFrameMon = CFrame.new(-5250, 389, -2272)},
-    {World = 1, LevelMin = 190, LevelMax = 209, Monster = "Prisoner", NameQuest = "PrisonerQuest", LevelQuest = 1, NameCheckQuest = "Prisoners", CFrameQ = CFrame.new(5308, 2, 474), CFrameMon = CFrame.new(5411, 96, 690)},
-    {World = 1, LevelMin = 210, LevelMax = 249, Monster = "Dangerous Prisoner", NameQuest = "PrisonerQuest", LevelQuest = 2, NameCheckQuest = "Dangerous Prisoner", CFrameQ = CFrame.new(5308, 2, 474), CFrameMon = CFrame.new(5411, 96, 690)},
-    {World = 1, LevelMin = 250, LevelMax = 299, Monster = "Toga Warrior", NameQuest = "ColosseumQuest", LevelQuest = 1, NameCheckQuest = "Toga Warrior", CFrameQ = CFrame.new(-1576, 8, -2985), CFrameMon = CFrame.new(-1641.4344482421875, 7.415142059326172, -2864.462646484375)},
-    {World = 1, LevelMin = 300, LevelMax = 329, Monster = "Military Soldier", NameQuest = "MagmaQuest", LevelQuest = 1, NameCheckQuest = "Military Soldier", CFrameQ = CFrame.new(-5316, 12, 8517), CFrameMon = CFrame.new(-5408, 11, 8447)},
-    {World = 1, LevelMin = 330, LevelMax = 374, Monster = "Military Spy", NameQuest = "MagmaQuest", LevelQuest = 2, NameCheckQuest = "Military Spy", CFrameQ = CFrame.new(-5316, 12, 8517), CFrameMon = CFrame.new(-5815, 84, 8820)},
-    {World = 1, LevelMin = 375, LevelMax = 399, Monster = "Fishman Warrior", NameQuest = "FishmanQuest", LevelQuest = 1, NameCheckQuest = "Fishman Warrior", CFrameQ = CFrame.new(61123, 19, 1569), CFrameMon = CFrame.new(60859, 19, 1501)},
-    {World = 1, LevelMin = 400, LevelMax = 449, Monster = "Fishman Commando", NameQuest = "FishmanQuest", LevelQuest = 2, NameCheckQuest = "Fishman Commando", CFrameQ = CFrame.new(61123, 19, 1569), CFrameMon = CFrame.new(61891, 19, 1470)},
-    {World = 1, LevelMin = 450, LevelMax = 474, Monster = "God's Guard", NameQuest = "SkyExp1Quest", LevelQuest = 1, NameCheckQuest = "God's Guards", CFrameQ = CFrame.new(-4722, 845, -1954), CFrameMon = CFrame.new(-4698, 845, -1912)},
-    {World = 1, LevelMin = 475, LevelMax = 524, Monster = "Shanda", NameQuest = "SkyExp1Quest", LevelQuest = 2, NameCheckQuest = "Shandas", CFrameQ = CFrame.new(-7862, 5546, -380), CFrameMon = CFrame.new(-7685, 5567, -502)},
-    {World = 1, LevelMin = 525, LevelMax = 549, Monster = "Royal Squad", NameQuest = "SkyExp2Quest", LevelQuest = 1, NameCheckQuest = "Royal Squad", CFrameQ = CFrame.new(-7904, 5636, -1412), CFrameMon = CFrame.new(-7670, 5607, -1460)},
-    {World = 1, LevelMin = 550, LevelMax = 624, Monster = "Royal Soldier", NameQuest = "SkyExp2Quest", LevelQuest = 2, NameCheckQuest = "Royal Soldier", CFrameQ = CFrame.new(-7904, 5636, -1412), CFrameMon = CFrame.new(-7828, 5607, -1744)},
-    {World = 1, LevelMin = 625, LevelMax = 649, Monster = "Galley Pirate", NameQuest = "FountainQuest", LevelQuest = 1, NameCheckQuest = "Galley Pirate", CFrameQ = CFrame.new(5256, 39, 4050), CFrameMon = CFrame.new(5589, 45, 3996)},
-    {World = 1, LevelMin = 650, LevelMax = 9999, Monster = "Galley Captain", NameQuest = "FountainQuest", LevelQuest = 2, NameCheckQuest = "Galley Captain", CFrameQ = CFrame.new(5256, 39, 4050), CFrameMon = CFrame.new(5649, 39, 4936)},
-
-    -- Second Sea (World 2) quest map adapted from the public Blox Fruits quest page.
-    {World = 2, LevelMin = 700, LevelMax = 724, Monster = "Raider", NameQuest = "Area1Quest", LevelQuest = 1, NameCheckQuest = "Raider", CFrameQ = CFrame.new(-425, 73, 1837), CFrameMon = CFrame.new(-746, 39, 2390)},
-    {World = 2, LevelMin = 725, LevelMax = 774, Monster = "Mercenary", NameQuest = "Area1Quest", LevelQuest = 2, NameCheckQuest = "Mercenary", CFrameQ = CFrame.new(-425, 73, 1837), CFrameMon = CFrame.new(-874, 141, 1312)},
-    {World = 2, LevelMin = 775, LevelMax = 799, Monster = "Swan Pirate", NameQuest = "Area2Quest", LevelQuest = 1, NameCheckQuest = "Swan Pirate", CFrameQ = CFrame.new(634, 73, 918), CFrameMon = CFrame.new(878, 122, 1235)},
-    {World = 2, LevelMin = 800, LevelMax = 874, Monster = "Factory Staff", NameQuest = "Area2Quest", LevelQuest = 2, NameCheckQuest = "Factory Staff", CFrameQ = CFrame.new(634, 73, 918), CFrameMon = CFrame.new(295, 73, -56)},
-    {World = 2, LevelMin = 875, LevelMax = 899, Monster = "Marine Lieutenant", NameQuest = "MarineQuest3", LevelQuest = 1, NameCheckQuest = "Marine Lieutenant", CFrameQ = CFrame.new(-2443, 73, -3219), CFrameMon = CFrame.new(-2806, 73, -3038)},
-    {World = 2, LevelMin = 900, LevelMax = 949, Monster = "Marine Captain", NameQuest = "MarineQuest3", LevelQuest = 2, NameCheckQuest = "Marine Captain", CFrameQ = CFrame.new(-2443, 73, -3219), CFrameMon = CFrame.new(-1869, 73, -3320)},
-    {World = 2, LevelMin = 950, LevelMax = 974, Monster = "Zombie", NameQuest = "ZombieQuest", LevelQuest = 1, NameCheckQuest = "Zombie", CFrameQ = CFrame.new(-5494, 49, -795), CFrameMon = CFrame.new(-5736, 126, -728)},
-    {World = 2, LevelMin = 975, LevelMax = 999, Monster = "Vampire", NameQuest = "ZombieQuest", LevelQuest = 2, NameCheckQuest = "Vampire", CFrameQ = CFrame.new(-5494, 49, -795), CFrameMon = CFrame.new(-6033, 7, -1317)},
-    {World = 2, LevelMin = 1000, LevelMax = 1049, Monster = "Snow Trooper", NameQuest = "SnowMountainQuest", LevelQuest = 1, NameCheckQuest = "Snow Trooper", CFrameQ = CFrame.new(605, 402, -5371), CFrameMon = CFrame.new(478, 402, -5362)},
-    {World = 2, LevelMin = 1050, LevelMax = 1099, Monster = "Winter Warrior", NameQuest = "SnowMountainQuest", LevelQuest = 2, NameCheckQuest = "Winter Warrior", CFrameQ = CFrame.new(605, 402, -5371), CFrameMon = CFrame.new(1157, 430, -5188)},
-    {World = 2, LevelMin = 1100, LevelMax = 1124, Monster = "Lab Subordinate", NameQuest = "IceSideQuest", LevelQuest = 1, NameCheckQuest = "Lab Subordinate", CFrameQ = CFrame.new(-6060, 16, -4905), CFrameMon = CFrame.new(-5782, 42, -4484)},
-    {World = 2, LevelMin = 1125, LevelMax = 1174, Monster = "Horned Warrior", NameQuest = "IceSideQuest", LevelQuest = 2, NameCheckQuest = "Horned Warrior", CFrameQ = CFrame.new(-6060, 16, -4905), CFrameMon = CFrame.new(-6406, 24, -5805)},
-    {World = 2, LevelMin = 1175, LevelMax = 1199, Monster = "Magma Ninja", NameQuest = "FireSideQuest", LevelQuest = 1, NameCheckQuest = "Magma Ninja", CFrameQ = CFrame.new(-5430, 16, -5295), CFrameMon = CFrame.new(-5428, 78, -5959)},
-    {World = 2, LevelMin = 1200, LevelMax = 1249, Monster = "Lava Pirate", NameQuest = "FireSideQuest", LevelQuest = 2, NameCheckQuest = "Lava Pirate", CFrameQ = CFrame.new(-5430, 16, -5295), CFrameMon = CFrame.new(-5270, 42, -4800)},
-    {World = 2, LevelMin = 1250, LevelMax = 1274, Monster = "Ship Deckhand", NameQuest = "ShipQuest1", LevelQuest = 1, NameCheckQuest = "Ship Deckhand", CFrameQ = CFrame.new(1038, 125, 32913), CFrameMon = CFrame.new(1198, 126, 33031)},
-    {World = 2, LevelMin = 1275, LevelMax = 1299, Monster = "Ship Engineer", NameQuest = "ShipQuest1", LevelQuest = 2, NameCheckQuest = "Ship Engineer", CFrameQ = CFrame.new(1038, 125, 32913), CFrameMon = CFrame.new(918, 44, 32787)},
-    {World = 2, LevelMin = 1300, LevelMax = 1324, Monster = "Ship Steward", NameQuest = "ShipQuest2", LevelQuest = 1, NameCheckQuest = "Ship Steward", CFrameQ = CFrame.new(969, 125, 33245), CFrameMon = CFrame.new(915, 130, 33419)},
-    {World = 2, LevelMin = 1325, LevelMax = 1349, Monster = "Ship Officer", NameQuest = "ShipQuest2", LevelQuest = 2, NameCheckQuest = "Ship Officer", CFrameQ = CFrame.new(969, 125, 33245), CFrameMon = CFrame.new(916, 181, 33335)},
-    {World = 2, LevelMin = 1350, LevelMax = 1374, Monster = "Arctic Warrior", NameQuest = "FrostQuest", LevelQuest = 1, NameCheckQuest = "Arctic Warrior", CFrameQ = CFrame.new(5669, 28, -6482), CFrameMon = CFrame.new(6038, 29, -6231)},
-    {World = 2, LevelMin = 1375, LevelMax = 1424, Monster = "Snow Lurker", NameQuest = "FrostQuest", LevelQuest = 2, NameCheckQuest = "Snow Lurker", CFrameQ = CFrame.new(5669, 28, -6482), CFrameMon = CFrame.new(5560, 42, -6826)},
-    {World = 2, LevelMin = 1425, LevelMax = 1449, Monster = "Sea Soldier", NameQuest = "ForgottenQuest", LevelQuest = 1, NameCheckQuest = "Sea Soldier", CFrameQ = CFrame.new(-3054, 237, -10148), CFrameMon = CFrame.new(-3022, 16, -9722)},
-    {World = 2, LevelMin = 1450, LevelMax = 9999, Monster = "Water Fighter", NameQuest = "ForgottenQuest", LevelQuest = 2, NameCheckQuest = "Water Fighter", CFrameQ = CFrame.new(-3054, 237, -10148), CFrameMon = CFrame.new(-3385, 239, -10542)}
-}
-
-
 local function CheckQuest()
     local Level = LocalPlayer.Data.Level.Value
     if World1 then
@@ -774,7 +719,6 @@ local function CheckQuest()
     if World3 then
 
     end
-
 end
 task.spawn(function()
 	local codes = {"BANEXPLOIT", "NOMOREHACKS", "WildDares", "BossBuild", "GetPranked", "EARN_FRUITS", "Sub2UncleKizaru", "FIGHT4FRUIT", "kittgaming", "TRIPLEABUSE", "Sub2CaptainMaui", "Sub2Fer999", "Enyu_is_Pro", "Magicbus", "JCWK", "Starcodeheo", "Bluxxy", "SUB2GAMERROBOT_EXP1", "Sub2NoobMaster123", "Sub2Daigrock", "Axiore", "TantaiGaming", "StrawHatMaine", "Sub2OfficialNoobie", "TheGreatAce", "SEATROLLIN", "24NOADMIN", "ADMIN_TROLL", "NEWTROLL", "SECRET_ADMIN", "staffbattle", "NOEXPLOIT", "NOOB2ADMIN", "CODESLIDE", "fruitconcepts"}
