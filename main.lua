@@ -1,8 +1,8 @@
 getgenv().Configs = {
 	Team = "Pirates", --Marines/Pirates
-	Saber = true, --true/false
-	Pole = true, --true/false
-	SkipFarmLevel = true --true/false
+	Saber = false, --true/false
+	Pole = false, --true/false
+	SkipFarmLevel = false --true/false
 }
 if not game:IsLoaded() then
     game.Loaded:Wait()
